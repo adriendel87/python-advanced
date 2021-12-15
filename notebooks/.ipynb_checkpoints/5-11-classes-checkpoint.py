@@ -299,9 +299,6 @@ class Circle1:
     def __repr__(self):
         return f"[Circle: {self.center} ⟷ {self.radius:.2f}]"
     
-    def area(self):
-        return math.pi * self.radius**2
-    
     def contains(self, point: Point):
         """
         returns a bool; does point belong in the circle ?
@@ -312,7 +309,7 @@ class Circle1:
 
 # %% cell_style="split"
 c1 = Circle1(Point(0, 0), 5)
-c1.area()
+c1
 
 # %% cell_style="split"
 c1.contains(a)
@@ -386,10 +383,6 @@ def timedelta_as_year_month(age: TimeDelta) -> str:
     month = year/12
     months, leftover = leftover // month, leftover % month
     return f"{years} ans, {months} mois"
-
-
-# %%
-timedelta_as_year_month(Date(2021, 12, 8) - Date(2001, 5, 2))
 
 
 # %% [markdown] tags=["level_advanced"]
